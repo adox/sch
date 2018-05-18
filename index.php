@@ -32,7 +32,7 @@ $f3->route('POST /form',
 
 $f3->route('GET @show: /@user1/@repo1/@user2/@repo2',
     function($f3, $params) {
-        $p = Sch\Projects::instance();
+        $p = new Sch\Projects;
 
         $p->add(new Sch\Project($params['user1'], $params['repo1']));
         $p->add(new Sch\Project($params['user2'], $params['repo2']));
@@ -46,8 +46,9 @@ $f3->route('GET @show: /@user1/@repo1/@user2/@repo2',
 );
 
 $f3->route('GET @api: /api/get/@user1/@repo1/@user2/@repo2',
-    function(){
-        $p = Sch\Projects::instance();
+    function($f3, $params){
+
+        $p = new Sch\Projects;
         $p->add(new Sch\Project($params['user1'], $params['repo1']));
         $p->add(new Sch\Project($params['user2'], $params['repo2']));
 
