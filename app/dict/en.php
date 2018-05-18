@@ -7,7 +7,9 @@ return array(
     "watchers" => "Watchers",
     "latestRelease" => "Latest release",
     "openPullRequest" => "Open pull requests",
-    "closedPullRequest" => "Closed pull requests"
+    "closedPullRequest" => "Closed pull requests",
+    "repo1" => "First repo",
+    "repo2" => "Second repo"
 );
 
 ?>
