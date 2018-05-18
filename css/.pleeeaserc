@@ -1,0 +1,9 @@
+{
+  "in": [	
+            "style.scss"
+
+		],
+  "out": "style.fixed.css",
+  "minifier": false,
+  "sass": true
+}

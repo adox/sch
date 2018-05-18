@@ -1,0 +1,23 @@
+<include href="{{ @template_dir . '/header.htm'}}" />
+
+<div class="main">
+    <h1>Github projects comparision</h1>
+
+    <table class="project-list">
+        <tr>
+            <repeat group="{{ @head }}" key="{{ @skey }}" value="{{ @shead }}">
+            <th>{{ @skey }} </th> 
+            </repeat>
+        </tr>
+    <repeat group="{{ @data }}" key="{{ @ikey }}" value="{{ @idata }}">
+    <tr>
+        <repeat group="{{ @idata }}" value="{{ @ispan }}">
+            <td>{{ @ispan }}</td>
+        </repeat>
+    </tr>
+    </repeat>
+    </table>
+
+</div>
+
+<include href="{{ @template_dir . '/footer.htm'}}" />
