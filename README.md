@@ -13,26 +13,26 @@ Api:
 http://sch.itecore.com/api/get/user1/repo1/user2/repo2
 
 example response:
-[
+<pre>
   {
-    "user": null,
-    "repoName": null,
-    "forks": 1646,
-    "stars": 6440,
-    "watchers": 6440,
-    "latestRelease": "2017-10-18T03:45:57Z",
-    "openPullRequest": 1,
-    "closedPullRequest": 1
+    "user": "vmg",
+    "repoName": "redcarpet",
+    "forks": 487,
+    "stars": 4213,
+    "watchers": 4213,
+    "latestRelease": "2018-05-17T20:57:56Z",
+    "openPullRequest": 6,
+    "closedPullRequest": 30
   },
   {
-    "user": null,
-    "repoName": null,
-    "forks": 1646,
-    "stars": 6440,
-    "watchers": 6440,
-    "latestRelease": "2017-10-18T03:45:57Z",
+    "user": "slashmax",
+    "repoName": "aamirror",
+    "forks": 28,
+    "stars": 112,
+    "watchers": 112,
+    "latestRelease": "2018-05-16T07:37:12Z",
     "openPullRequest": 1,
     "closedPullRequest": 1
   }
 ]
-
+</pre>
