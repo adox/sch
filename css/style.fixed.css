@@ -3,13 +3,16 @@ li,
 p {
   font-family: Montserrat; }
 
-ul {
-  margin: 0;
-  padding: 0; }
+th {
+  text-align: left; }
+
+th,
+td {
+  padding: 5px; }
 
 .main {
   margin: 0 auto;
-  max-width: 880px;
+  max-width: 980px;
   width: 100%; }
 
 .project-list {

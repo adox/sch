@@ -22,6 +22,19 @@ class Project{
     {
         return get_class_vars(__CLASS__);
     }
+
+    public static function getTitles()
+    {
+        $f3 = \Base::instance();
+        $tr = array();
+        
+        foreach( self::expose() as $key => $val ){
+            $str = $f3->get( $key );
+            $tr[] = ( $str ? $str : $key);;
+        }
+
+        return $tr;
+    }
     
     function getData()
     {

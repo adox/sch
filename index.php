@@ -4,7 +4,8 @@ require 'vendor/autoload.php';
 $f3 = \Base::instance();
 $f3->set('AUTOLOAD','autoload/');
 $f3->set('UI','template/');
-
+$f3->set('LOCALES','app/dict/');
+$f3->set('LANGUAGE','en');
 
 $f3->route('GET /',
     function($f3) {
@@ -37,7 +38,7 @@ $f3->route('GET @show: /@user1/@repo1/@user2/@repo2',
         $p->add(new Sch\Project($params['user1'], $params['repo1']));
         $p->add(new Sch\Project($params['user2'], $params['repo2']));
 
-        $f3->set('head', Sch\Project::expose() );
+        $f3->set('head', Sch\Project::getTitles() );
         $f3->set('data', $p->getProjects() );
 
         echo \Template::instance()->render( 'main.htm' );
