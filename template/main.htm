@@ -1,12 +1,12 @@
-<include href="{{ @template_dir . '/header.htm'}}" />
+<include href="{{ 'header.htm'}}" />
 
-<div class="main">
-    <h1>Github projects comparision</h1>
+<div class="main container pt-5">
+    <h1 class="mb-5">Github projects comparision</h1>
 
-    <table class="project-list">
+    <table class="table">
         <tr>
             <repeat group="{{ @head }}" key="{{ @skey }}" value="{{ @shead }}">
-            <th>{{ @skey }} </th> 
+            <th>{{ @shead }} </th> 
             </repeat>
         </tr>
     <repeat group="{{ @data }}" key="{{ @ikey }}" value="{{ @idata }}">
@@ -20,4 +20,4 @@
 
 </div>
 
-<include href="{{ @template_dir . '/footer.htm'}}" />
+<include href="{{ 'footer.htm'}}" />

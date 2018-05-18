@@ -1,15 +1,27 @@
-<form action="/form" method="POST">
-    <p>
-    <input type="text" name="user1" value="vmg">
-    <input type="text" name="repo1" value="redcarpet">
-    </p>
+<include href="{{ 'header.htm'}}" />
 
-    <p>
-    <input type="text" name="user2" value="slashmax">
-    <input type="text" name="repo2" value="aamirror">
-    </p>
+<div class="main container pt-5">
+    <h1 class="mb-5">Github projects comparision</h1>
 
-    <p>
-    <input type="submit" >
-    </p>
-</form>
+    <form action="/form" method="POST" class="">
+        <fieldset>
+            <legend>{{ @repo1 }}</legend>
+            <div class="form-inline" >
+                <input type="text" class="form-control mb-2" name="user1" value="vmg" placeholder="user">
+                <input type="text" class="form-control mb-2" name="repo1" value="redcarpet" placeholder="repo">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend> {{ @repo2 }} </legend>
+            <div class="form-inline" >
+                <input type="text" class="form-control mb-2" name="user2" value="slashmax" placeholder="user">
+                <input type="text" class="form-control mb-2" name="repo2" value="aamirror" placeholder="repo">
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+
+</div>
+<include href="{{ 'footer.htm'}}" />
