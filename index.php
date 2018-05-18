@@ -1,9 +1,9 @@
 <?php
-define('F3_TEMPLATE_DIR', 'template');
-
 require 'vendor/autoload.php';
+
 $f3 = \Base::instance();
 $f3->set('AUTOLOAD','autoload/');
+$f3->set('UI','template/');
 
 
 $f3->route('GET /',
@@ -15,7 +15,7 @@ $f3->route('GET /',
 
 $f3->route('GET @form: /form',
     function($f3) {
-        echo \Template::instance()->render( F3_TEMPLATE_DIR . '/form.htm' );
+        echo \Template::instance()->render( 'form.htm' );
     }
 );
 
@@ -39,9 +39,8 @@ $f3->route('GET @show: /@user1/@repo1/@user2/@repo2',
 
         $f3->set('head', Sch\Project::expose() );
         $f3->set('data', $p->getProjects() );
-        $f3->set('template_dir', F3_TEMPLATE_DIR);
 
-        echo \Template::instance()->render( F3_TEMPLATE_DIR . '/main.htm' );
+        echo \Template::instance()->render( 'main.htm' );
     }
 );
 
